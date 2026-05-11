@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BANG BANG - Juego</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap" rel="stylesheet">
+
+    <!-- manifest -->
+     <link rel="manifest" href="manifest.webmanifest">
+     
+</head>
+<body>
+    <div class="bg-transicion bg-transicion-show"></div>
+
+    <div class="ganador" style="display:none;">
+        <div class="personajeGanador">
+            <h1>GANADOR <span id="nombreganador"></span></h1>
+            <img src="" id="imgGanador">
+            <button onclick="restart()" class="restart"> VOLVER A JUGAR </button>
+        </div>
+    </div>
+
+    <div class="bg-juego">
+        <div class="left">
+            <div class="vidas1"></div> <div class="p1">
+                <h2 id="jugador1"></h2>
+            </div>
+        </div>
+        <div class="right">
+            <div class="vidas2"></div> <div class="p2">
+                <h2 id="jugador2"></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="conteo">
+        <div class="no3"><img src="img/3.png"></div>
+        <div class="no2"><img src="img/2.png"></div>
+        <div class="no1"><img src="img/1.png"></div>
+        <div class="msj" onclick="conteo()">¿LISTOS?</div>
+    </div>
+
+    <script src="funciones.js"></script>
+    <script>
+        window.addEventListener('load', quitarBG);
+        window.addEventListener('load', cargarEscenario);
+    </script>
+</body>
+</html>
